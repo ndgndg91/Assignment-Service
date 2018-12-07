@@ -1,0 +1,92 @@
+dollar notes with fancy serial numbers command a premium from some currency collectors.
+a solid serial number, a radar, a ladder, or several other types of fancy serial numbers
+can make a note worth much more than other notes with the same denomination, from the
+same series, and in the same condition. but just how rare are these fancy serial numbers?
+dave undis, a numismatist himself, sought out the answer and published it in an article
+in the journal Paper Money in 2011.
+
+Modern united states currency features eight-digit serial numbers from 00000001 to 99999999.
+There are 99,999,999 different eight-digit serial numbers.
+To keep things simple, we'll assume that all serial numbers are equally likely to appear on a randomly selected note.
+in reality, some serial numbers are harder to find because the Bureau of Engraving and Printing usually removes them from
+production before circulation, replacing them with star notes.Also, print runs don't
+always start at 00000001 or go all the way up to 99999999. But this doesn't really
+affect our anlysis much.
+(To make some of the arithmetic below simpler, we'll sometimes include the non-existent 00000000 serial number, making a total of 100,000,000
+serial numbers, but we'll always remember to remove that non-existent note from out totals.)
+
+In a solid serial number, every digit is the same. There are nine solid serial numbers:
+11111111,22222222,33333333,44444444,55555555,66666666,77777777,88888888 and 99999999
+
+
+In a ladder serial number, each digit is one number higher (or lower) than the previous digit.
+There are six eight-digit ladder serial numbers:
+01234567,12345678,23456789,76543210,87654321 and 987654321.(There are eight if
+you also count 34567890 and 098776543.)
+
+
+In a radar serial number, the second four digits are the reverse of the first four
+digits. Examples are 11188111 and 20066002.
+
+
+
+In a repeater serial number, the second four digits are a repeat of the first
+four digits. Exxamples are 11181118 and 20062006.
+
+In calculating the number of radars and repeaters, it's useful to divide the eight-digit serial number into its first and second halves.
+Consider the first half. There are 10,000 possible numbers; 0000 through 9999.
+Now consider the second half. Again, there are 10,000 possible numbers. Of these 10,000 only one
+will be the same as the first half and only one will be the reverse of the first half.
+So there are 10,000 repeaters and 10,000 radars.
+These totals include the non-existent 00000000 number and the nine solids.
+Excluding these, there are 9,990 radars and 9,990 repeaters.
+
+A super radar is a special kind of radar. A super radar is a radar in which the middle six digits are all the same.
+Examples are 71111117 and 98888889. There are 99 super radars:01111110,02222220,
+03333330,....,97777779,98888889,99999999. Nine of these are solids.
+Excluding thesem there are 90 super radars.
+
+A super repeater is a special kind of repeater. A super repeater is a repeater in which the first two digits are
+repeated four times. Examples are 26262626 and 78787878. There are 90 super repeater:
+01010101,02020202,03030303,...,97979797,98989898 and 99999999. Nine of these are solids.
+Excluding these, there are 90 super repeaters.
+
+
+A radar repeater is both a radar and a repeater. Examples are 26622662 and 87788778.
+There are 99 radar repeaters: 01100110,02200220,03300330,..,97799779,98899889 and 99999999.
+Nine of these are solids. Excluding these, there are 90 radar repeaters.
+
+
+
+In a seven-of-a-kind serial number, seven of the digits are all the same. Examples are 44444424 and 99899999.
+For each of the nine solid serial numbers, you can make 72 seven-of-a-kind serial numbers: nine by changing each of the eight digits.
+You can also make 72 seven-of-a-kind serial numbers by changing each of the eight digits of the non-existend 00000000 serial number.
+So there are 720 seven-of-a-kind notes. This includes the 180 seven-in-a-row notes.
+
+
+
+In a binary serial number, only tow numbers appear in the eight digits. Examples are 10100111 and 11181888. To see how many binary serial numbers there are,
+pick two different numbers from zero through nine. 20% of all serial numbers have one of these numbeers as the first digit. Of
+these, 20% have one of these two numbers as the second digit. Of these, 20% have one of these numbers as the third digit. Continue similarly through the eighth digit, So
+
+20% x 20% x 20% x 20% x 20% x 20% x 20% x 20%
+
+of all serial numbers have one of these two numbers for all eight digits. That's 256 serial numbers.  Two of these 256 serial numbers are solids,
+leaving 254. There are 45 different ways to choose two different numbers from zero to nine. Multiplying 254 b 45 tells us there are 11,430 binary
+serial numbers(excluding solids).
+
+
+The table below shows how many different fancy serial numbers appear in a run of 99,999,999 nites. it also shows the odds of seeing each type of fancy serial number on a randomly selected note from a run of 99,999,999 consecutive notes.
+
+As priviously mentioned, a radomm note will typcially not come from a run of 99,999,999 notes. But this table still gives a good starting point for
+further analysis and collecting enjoyment.
+
+
+
+In this assignment we represent a serial number either as a strictly positive natural number( an integer) or as a string that exists of one or mor
+digits that are not all equal to zero. The number of digits in a serial number is not fixed, but there's always at least one digit.
+In converting a serial number into its string representation, leading zeros are added untill the stirng representation has at least eight digits . Your task:
+
+
+Write a function serialNumber that takes a serial number.The function must return the string representation of the given serial number,
+where leading zeros may have been added such that th string representation has at least eight digits.

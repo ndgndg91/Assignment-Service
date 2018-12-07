@@ -1,0 +1,26 @@
+어제 물어보신 부분 정리해서 알려드릴게요 (아무래도 선생님께 부탁 드려야 할거 같네요 흑 ㅠㅠ)
+
+1. Sequence length 구하기
+
+2. Amino acid sequence 구하기
+
+Sequence 가요, 문제에 주어진거처럼 "ACTGATCGTTACGTACGAGTCAT" 말하는거구요
+아마 4번인가 5번 과제 했을때 나온 표인데요 이걸 amino-acid sequence 라고 합니다(사진 참고)
+3. Complement DNA 구하기
+Complement DNA 뜻은 주어진 sequence를 예시로 들자면요,
+
+"ACTGATCGTTACGTACGAGTCAT"
+ => “TGACTAGCAATGCATGCTCAGTA”
+사진처럼 반대로 바뀌는 경우를 Complement DNA 라고 합니다 A<=>T / G<=>C
+4. GC (or CG) 개수 구한뒤 전체 sequence 에서 차지 하는 % 구하기
+"ACTGATCGTTACGTACGAGTCAT" 를 가지고서
+
+“GC (혹은 CG) 반복 되는 개수를 찾고나서 전체 개수에서 GC 가 차지 하는 %가 몇인지 계산 하는 문제구요
+5. ANTAA (N=ATCG) => A[ATGC]TAAT
+
+주어진 sequence 안에 얼만큼 매칭 하는지 찾기
+ “A[ATGC]TAAT” 문제에 주어진 시퀀스 "ACTGATCGTTACGTACGAGTCAT" 에 몇개 매치 하는지 알아보는거구요
+
+6. 이건 TA 가 얼만큼 자르고서 맞춰보고 결과 나오는지는 내일 다시 알려준다고 하네요
+
+알려드린 1-6 까지를 Object oriented programming 방식으로 구해주시면 됩니다(CH 14 참고)

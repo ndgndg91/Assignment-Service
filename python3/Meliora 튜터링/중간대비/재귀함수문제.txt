@@ -1,0 +1,24 @@
+1. 자연수 'n'값을 입력받아 0이 될 때까지 자신을 호출하는 함수를 정의 하시오.
+
+def counter(num):
+    if num==0:
+        print(num)
+        return 
+    print(num)
+    num -= 1
+    counter(num)
+
+2. 자연수 'n' 입력받아 팩토리얼을 리턴하는 함수를 재귀함수를 이용하여 정의 하시오.
+http://codepractice.tistory.com/92
+def main():
+    num = int(input("자연수를 입력해 주세요.\n"))
+    fact = factorial(num)
+    print("자연수",num,"의 계승은",fact)
+
+def factorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num * factorial(num - 1)
+
+main()

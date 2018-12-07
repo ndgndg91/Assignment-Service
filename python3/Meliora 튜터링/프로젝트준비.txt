@@ -1,0 +1,86 @@
+﻿Project ideas:
+Some of these projects are more clearly defined than others. Please be as creative as you like within the constraints of solving the problem. Remember that part of your marks for this project come from solving the challenge but part also come from testing your solution to ensure that it is robust (10 points).
+An additional 5 points come from your write-up outlining the problem and describing your solution to it and 5 points come from your ten-minute presentation/attendance at the other presentations. Your presentation and paper should include clearly stating your problem, giving your solution, describing any issues/problems with your solution and how you tried to 'break' your code to uncover unforeseen problems (usually with data input from users).
+ 
+The problems indicate whether or not I think that 1 or 2 people should be working on them. If you believe that you can expand a 1-person project to be appropriate for the efforts of 2 people than please let me know! If you work in a lab and want to work on a project related to your research endeavours, please discuss your problem with me first.
+1. (2 people) Searching for genes:
+Genes can occur on either strand of double stranded DNA. An Open Reading Frame (ORF) is the stretch of sequence between a start codon and the next in frame stop codon (so the stop codon needs to be a multiple of 3 nucleotides away from the start codon). There are six frames to be tested in any sequence.
+ 
+ATG = start codon
+TGA, TAG, TAA = Stop codons
+Gene 1: coding strand is on top
+ 
+5' - AATGCCGTGCTTGTAGACGTAGGCTTAGATCGTCATGGG - 3'
+3' - TTACGGCACGAACATCTGCATCCGAATCTAGCAGTACCC - 5'
+ 
+Gene 2: coding strand is on bottom
+ 
+However, when searching real data for O.R.F. (open reading frames), you will discover a sad fact of the bioinformatics universe: not every ATG is the beginning of a true O.R.F. We need to be able to separate out the REAL ORFs from those created by random chance.
+ 
+One strategy to test whether or not an ORF is 'real' is based on the reasonable assumption that 'real' ORFs are longer than the 'fake' ORFs that are the result of random processes. You're going to see if this is a reasonable assumption by simulating fake double stranded sequences and testing how long any created ORFs are compared to a real ORF.
+For this project, you can choose your own gene sequence and then you will need to do the following (note that this is not an exhaustive list – depending on the way you solve this problem, you will need to solve other 'sub-problems'):
+• Upload your sequence to your program
+• You will want to convert your nucleotide string into a character list using the function list("ATGCTGATGTCT").
+• Create a function that turns your sequence into random sequences. You will likely need to import the random module and use the random.shuffle method. This method takes a list of characters and shuffles them to create a new list of the same size. IT REPLACES THE OLD LIST. It samples without replacement which means it will create a list that contains the same percentage of A,G,C,and Ts as your original list.
+• You'll also need to convert your new list back into a string
+• Make sure you search the random sequences you create for start codons and stop codons that are in-frame and determine how long the fake ORFs are compared to your real ORF.
+• You will also need to do the same thing for the complementary strand.
+• You can run some statistics on whether or not the lengths of the real and fake are statistically different.
+​
+2. (2 people) automated BLAST search and FASTA processor.
+3. (1 person) You solved a simpler version of this on assignment 5: 
+Predict the fragment lengths that we will get if we digest any given sequence with two made up restriction enzymes: 
+abcI whose recognition site is ANT*AAT
+and abcII whose recognition site is GCRW*TG.
+Remember that * are the cut sites.
+
+
+
+4. (2 people) The following is a more challenging version of Assignment 6:
+​MRCA means “Most Recent Common Ancestor” and provides important ​information about the time to species splitting. In the example we worked through ​in class, the MRCA of Pan troglodytes and Tarsius tarsier is Haplorrhini.
+ 
+​You will need to write two programs that should solve for the most general case ​(in case your taxon had more members or more internal nodes than currently ​listed).
+a. a recursive solution to this problem
+b. iterative solution (a solution that doesn't rely on recursion).
+​These two strategies can then be compared and tested!
+Use the following dictionary in the recursive and iterative solutions and make sure that you compare the two solutions.
+tax_dict = {
+'Pan troglodytes' : 'Hominoidea',       'Pongo abelii' : 'Hominoidea',
+'Hominoidea' :  'Simiiformes',          'Simiiformes' : 'Haplorrhini',
+'Tarsius tarsier' : 'Tarsiiformes',     'Haplorrhini' : 'Primates',
+'Tarsiiformes' : 'Haplorrhini',         'Loris tardigradus' : 'Lorisidae',
+'Lorisidae' : 'Strepsirrhini',          'Strepsirrhini' : 'Primates',
+'Allocebus trichotis' : 'Lemuriformes', 'Lemuriformes' : 'Strepsirrhini',
+'Galago alleni' : 'Lorisiformes',       'Lorisiformes' : 'Strepsirrhini',
+'Galago moholi' : 'Lorisiformes'}
+ 
+5. (1 person) Previously, in assignment 4, you were asked to create functions that broke the sequence into codons and translated them into amino acids. 
+However, we know that there is some "wobble" during this translation.
+Write a script that includes wobble rules when it is translating codons into amino acids (https://en.wikipedia.org/wiki/Wobble_base_pair).
+ 
+6. There is an excellent bioinformatics website called Rosalind 
+(after Rosalind Franklin, of course) 
+that lists a number of challenging biologically motivated problems. 
+http://rosalind.info/problems/list-view/.
+​
+​You should look through these problems and 
+see if there are any that appeal to ​you. 
+Don't be intimidated: we have solved a number of similar problems through ​your assignments. 
+The write up of these problems on Rosalind is fairly sparse 
+but ​it is useful for presenting biologically motivated questions.
+You will probably ​need to expand on the problem as described by the website and 
+find sequences to ​use while solving the problem. 
+Here are just some of the listed problems that I ​thought seemed like great candidates to be expanded into projects. 
+You might find ​another interesting project on the website – 
+but please choose one that is ​appropriate for the efforts of the number of contributors in your group.
+
+a. (1 person) Hamming distance between two sequences. This is about alignment between two sequences (how similar are they?) http://rosalind.info/problems/hamm/
+b. (1 person) Mendel’s first law http://rosalind.info/problems/iprb/
+c. (2 people) Expected number Offspring. You will need to incorporate the number of offspring each individual leaves in the next generation (this will depend on the value of selection, s) http://rosalind.info/problems/iev/
+d. (2 people) Mendels second law: independent alleles http://rosalind.info/problems/lia/
+e. (2 people) Error correction in reads: http://rosalind.info/problems/corr/
+f. (2 people) Counting phylogenetic ancestors: http://rosalind.info/problems/inod/
+g. (2 people) Distance alignment: http://rosalind.info/problems/edta/
+h. (2 people) Inferring genotype from pedigree: http://rosalind.info/problems/mend/
+i. (2 people) Multiple alignment: http://rosalind.info/problems/mult/
+j. (2 people) Alignment based phylogeny: http://rosalind.info/problems/alph/

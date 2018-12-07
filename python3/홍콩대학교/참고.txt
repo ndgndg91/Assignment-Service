@@ -1,0 +1,38 @@
+1. 사람과 염소 e->w
+
+2. 사람혼자 w->e
+
+3. 사람과 늑대 e->w
+
+4. 사람과 염소 w->e
+
+5. 사람과 양배추 e->w
+
+6. 사람혼자 w->e
+
+7. 사람과 염소 e->w
+
+
+    states = genStates()
+    for j in states:
+        if j == 'EWWE':
+            states.remove(j)
+        elif j == 'WEEW':
+            states.remove(j)
+        elif j == 'EWEW':
+            states.remove(j)
+        elif j == 'WEWE':
+            states.remove(j)
+    print(states)
+
+
+def genStates():
+    side = ("E", "W")
+    states = []
+    for i in side:
+        for j in side:
+            for k in side:
+                for l in side:
+                    aState = i + j + k + l
+                    states.append(aState)
+    return states

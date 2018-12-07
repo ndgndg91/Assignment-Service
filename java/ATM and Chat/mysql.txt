@@ -1,0 +1,9 @@
+create database chat default character set utf8;
+create user 'chatexam'@'localhost' identified by 'chatpw';
+create user 'chatexam'@'%' identified by 'chatpw';
+GRANT ALL PRIVILEGES ON chat.* TO 'chatexam'@'localhost';
+GRANT ALL PRIVILEGES ON chat.* TO 'chatexam'@'%';
+create table chat.member (
+memberid varchar(50) primary key,
+password varchar(20) not null
+) engine=InnoDB default character set = utf8;
